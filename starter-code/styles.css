@@ -1,0 +1,150 @@
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+html {
+    height:100vh;
+}
+
+body {
+    width:96vw;
+    margin:0;
+}
+
+h1 {
+    font-family: 'Bellefair', serif;
+    font-size: 150px;
+    color: white;
+    text-transform: uppercase;
+    margin:0;
+}
+
+h2 {
+    font-family: 'Bellefair', serif;
+    font-size: 100px;
+}
+
+h3 {
+    font-family: 'Bellefair', serif;
+    font-size: 56px;
+}
+
+h4 {
+    font-family: 'Bellefair', serif;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing:2px;
+    color:black;
+}
+
+h5 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+    color: hsl(231,77%,90%);
+    text-transform: uppercase
+}
+
+.home {
+    background-image:url("assets/home/background-home-desktop.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}
+
+p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: hsl(231,77%,90%);
+}
+
+.home-text-content {
+    width: 450px;
+    position:absolute;
+    left: 11%;
+    bottom:11%
+}
+
+.explore-button {
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(36,38,47,0) 50%);
+    display:inline-block;
+    padding: 65px 55px;
+    border-radius: 50%;
+    margin-left: 80%;
+    margin-top: 20%
+}
+
+.explore-button:hover {
+    background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(36,38,47,1) 50%);
+    margin-left: 76%;
+    margin-top: 26%
+
+}
+
+/* nav bar */
+
+header {
+    width: 96%;
+    display:grid;
+    grid-template-columns:3.5% auto 60%;
+    align-items:center;
+    margin: 2.8% 0 0 5.7%;
+
+}
+
+nav {
+    display:flex;
+    justify-content: center;
+    column-gap:1.7vw;
+    height: 6.66vw;
+    line-height: 6.66vw;
+    width: 57.6vw;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+}
+
+.nav-item {
+    color:white;
+    font-family: 'Barlow Condensed', sans-serif;
+    size:16px;
+    letter-spacing: 2.7px;
+}
+
+.nav-item:hover {
+    border-bottom: 2px solid hsl(231,77%,90%);
+}
+
+.active-nav-item {
+    border-bottom: 2px solid hsl(0,0%,100%);
+}
+
+.nav-number {
+    font-weight:700;
+
+}
+
+.nav-description {
+    margin-left: 5px;
+    text-transform: uppercase
+}
+
+hr {
+    width: 90%;
+    position:relative;
+    left: 4vw;
+    z-index:1
+}
+
+
+
+
+/* TODO
+Home page: when height is reduced too small, text div overflows up.
+Home page: when width is reduced too small, the length of the hr overflows into nav elements and nav elements overflow out of div
+TODO: media query for positioning on home.
+
+
+
+*/

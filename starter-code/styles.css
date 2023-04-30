@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    width:96vw;
+    width:100vw;
     margin:0;
 }
 
@@ -16,6 +16,7 @@ h1 {
     color: white;
     text-transform: uppercase;
     margin:0;
+    font-weight:400;
 }
 
 h2 {
@@ -34,6 +35,8 @@ h4 {
     text-transform: uppercase;
     letter-spacing:2px;
     color:black;
+    font-weight:400;
+    line-height:32px;
 }
 
 h5 {
@@ -41,7 +44,9 @@ h5 {
     font-size: 28px;
     letter-spacing: 4.75px;
     color: hsl(231,77%,90%);
-    text-transform: uppercase
+    text-transform: uppercase;
+    font-weight:400;
+    margin: auto auto 20px 0
 }
 
 .home {
@@ -57,50 +62,57 @@ p {
     font-size: 18px;
     line-height: 32px;
     color: hsl(231,77%,90%);
+
+    
 }
 
 .home-text-content {
     width: 450px;
     position:absolute;
-    left: 11%;
-    bottom:11%
+    left: 11.5%;
+    top: 43%
+}
+
+.explore-container {
+    position:absolute;
+    left: 65%;
+    bottom: 8%;
 }
 
 .explore-button {
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(36,38,47,0) 50%);
     display:inline-block;
-    padding: 65px 55px;
+    padding: 135px 120px;
     border-radius: 50%;
-    margin-left: 80%;
-    margin-top: 20%
+
+
 }
 
 .explore-button:hover {
     background: radial-gradient(circle, rgba(255,255,255,1) 50%, rgba(36,38,47,1) 50%);
-    margin-left: 76%;
-    margin-top: 26%
 
 }
 
 /* nav bar */
 
-header {
-    width: 96%;
-    display:grid;
-    grid-template-columns:3.5% auto 60%;
-    align-items:center;
-    margin: 2.8% 0 0 5.7%;
+svg {
+    margin-left: 39px;
+}
 
+header {
+    width: 100%;
+    display:grid;
+    grid-template-columns:3.5% 40% auto;
+    align-items:center;
+    margin: 2.8% 0 0 0%;
 }
 
 nav {
     display:flex;
     justify-content: center;
-    column-gap:1.7vw;
     height: 6.66vw;
     line-height: 6.66vw;
-    width: 57.6vw;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
 }
@@ -110,10 +122,11 @@ nav {
     font-family: 'Barlow Condensed', sans-serif;
     size:16px;
     letter-spacing: 2.7px;
+    margin: 0 8px;
 }
 
 .nav-item:hover {
-    border-bottom: 2px solid hsl(231,77%,90%);
+    border-bottom: 2px solid white;
 }
 
 .active-nav-item {
@@ -131,16 +144,91 @@ nav {
 }
 
 hr {
-    width: 90%;
+    width: 85%;
     position:relative;
-    left: 4vw;
-    z-index:1
+    left: 5vw;
+    z-index:1;
+    border: 0.2px solid grey;
+}
+
+
+@media only screen and (max-width:1390px) {
+
+    .explore-container {
+        left: 70%;
+    }
+
+    .explore-button {
+        padding:7vw 5vw
+    }
+}
+
+
+/* tablet */
+@media only screen and (max-width:768px) {
+    .home {
+        background-image:url("assets/home/background-home-tablet.jpg");
+    }
+
+    .home-text-content {
+        position:static;
+        margin: 10% auto;
+    } 
+
+    
+
+    nav {
+        height: 10vh;
+        line-height: 10vh;
+    }
+    
+    .nav-number {
+        display:none;
+    }
+
+    header {
+        display:flex;
+        justify-content: space-between;
+        margin: 0
+    }
+
+    hr {
+        display:none;
+    }
+
+
+
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* QUESTIONS
+
+why does the h1 and h4 require font-weight 400 for it to display correctly? 
+
+*/
+
+
+
+
+
+
 /* TODO
+
 Home page: when height is reduced too small, text div overflows up.
 Home page: when width is reduced too small, the length of the hr overflows into nav elements and nav elements overflow out of div
 TODO: media query for positioning on home.

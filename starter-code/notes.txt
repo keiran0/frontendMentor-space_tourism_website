@@ -1,0 +1,4 @@
+mobile: max 650px
+tablet:  651 - 800px
+desktop (button modified position): 801 - 1390
+desktop (full size) : 1391+

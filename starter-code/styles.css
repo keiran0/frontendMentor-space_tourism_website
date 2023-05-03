@@ -3,6 +3,7 @@ font-family: 'Bellefair', serif; */
 
 html {
     height:100%;
+    width:100vw;
 }
 
 body {
@@ -36,6 +37,7 @@ h3 {
     color:white;
     text-transform:uppercase;
     font-weight: 400;
+    margin: 0 auto 5% auto;
 }
 
 h4 {
@@ -46,6 +48,7 @@ h4 {
     color:grey;
     font-weight:400;
     line-height:32px;
+    margin-bottom: 20px;
 }
 
 h5 {
@@ -254,21 +257,35 @@ hr {
 }
 
 .crew-text{
-    margin: 0 50vw 0 12vw;
+    margin: 5% 50vw 0 12vw;
+    position:absolute;
+    z-index:2;
+}
+
+.crew-text p {
+    margin: auto 15% auto 0
 }
 
 .crew-image {
     position:absolute;
-    left: 60%;
+    right: 10vw;
     bottom: 0px;
 }
 
 .crew-nav {
-
+    margin-top: 10%;
 }
 
 .crew-nav-item {
-    
+    border-radius: 50%;
+    padding:6px;
+    margin-right:15px;
+    background-color:grey;
+    border: none;
+}
+
+.active-crew-nav-item {
+    background-color:white;
 }
 
 @media only screen and (min-width:651px) {
@@ -397,6 +414,42 @@ hr {
         margin-bottom: 20px;
     }
 
+    /* crew */
+
+    .crew {
+        background-image: url(assets/crew/background-crew-tablet.jpg)
+    }
+
+    .crew-text {
+        position:static;
+        margin: 0 12vw 5vw 12vw;
+        text-align:center;
+    }
+
+    .crew-nav {
+        margin-top: 5%;
+        position:static;
+    }
+
+    .crew-image {
+        position:static;
+        width: 300px;
+        display:block;
+        margin: 0 auto;
+    }
+
+    .crew-text p {
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 24px;
+        margin-bottom: 0px;
+    }
 
 } 
 
@@ -481,6 +534,12 @@ hr {
 
     .travel-detail-subcontainer {
         margin-bottom: 20px
+    }
+
+    /* crew */
+
+    .crew {
+        background-image:url(assets/crew/background-crew-mobile.jpg)
     }
 }
 
